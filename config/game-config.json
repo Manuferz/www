@@ -1,0 +1,75 @@
+{
+	"antialias": false,
+	"buildConfig": {"debug":true,"extra":[],"platform":"html5"},
+	"debugDraw": false,
+	"disposeImages": false,
+	"forceHiResAssets": false,
+	"initSceneID": 1,
+	"keys": {
+		"W": ["W"],
+		"S": ["S"],
+		"A": ["A"],
+		"D": ["D"],
+		"Space": ["SPACE"],
+		"Ctrl": ["CONTROL"],
+		"enter": ["ENTER"],
+		"Dialog Fast": ["V"],
+		"Zoom Dialog": ["B"],
+		"Escape": ["ESCAPE"],
+		"1": ["NUMBER_1"],
+		"2": ["NUMBER_2"],
+		"3": ["NUMBER_3"]
+		
+	},
+	"pixelsnap": false,
+	"physicsMode": "NORMAL_PHYSICS",
+	"releaseMode": false,
+	"showConsole": false,
+	"stageWidth": 1360,
+	"stageHeight": 768,
+	"toolsetInterfaceHost": "localhost",
+	"toolsetInterfacePort": -1,
+	"projectName": "Bismuth Land 016",
+	"useGciLogging": false,
+	
+	"config-mobile": {
+		"adPositionBottom": true,
+		"autorotate": false,
+		"gameScale": 1,
+		"landscape": false,
+		"testAds": false,
+		"toolsetInterfaceHost": "192.168.1.100",
+
+		"config-android": {
+			"disableBackButton": false,
+			"scaleMode": "NO_SCALING",
+			"scales": ["1x"]
+		},
+		
+		"config-ios": {
+			"scaleMode": "NO_SCALING",
+			"scales": ["1x"]
+		}
+	},
+	
+	"config-desktop": {
+		"gameScale": 1.0,
+		"scaleMode": "STRETCH_TO_FIT",
+		"scales": ["1x"],
+		"startInFullScreen": false
+	},
+	
+	"config-web": {
+		"gameScale": 1.0,
+		"startInFullScreen": false,
+		"scales": ["1x"],
+
+		"config-flash": {
+			"scaleMode": "NO_SCALING"
+		},
+		
+		"config-html5": {
+			"toolsetInterfaceHost": "192.168.1.100"
+		}
+	}
+}

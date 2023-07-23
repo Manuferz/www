@@ -1,0 +1,7 @@
+struct_id=20
+struct_type=dialog.ds.ext.FlowScripts
+animForPointer=[130,1]
+pointerPos=[[90% - 50],[90% - 32]]
+advanceDialogButton=Space
+waitingSoundInterval=500
+noInputSoundWithTags=[close,end,option]:String

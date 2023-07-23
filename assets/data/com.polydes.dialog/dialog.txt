@@ -1,0 +1,138 @@
+#-Info-
+
+ï»¿//I should probably use the same format for all the others here. > names a dialog if it's the first character, # begins a comment.//
+//comments are inside two pairs of double-slashes//
+//use a hash (#) to begin a number or text label//
+//using special symbols in dialog://
+// \< = < //
+// \> = > //
+// \$ = $ //
+// \\ = \ //
+
+#Start
+
+<setattr [game adam true]>
+<setattr [game adamclark false]>
+<setattr [game adamangry false]>
+<face 1>
+<showname "Colonel Rouge">
+<font "FontRed">
+<typespeed 0.01>
+<playchan ColonelVoice 29>
+<br>WELCOME TO LAST XENOS TACTICS. (PRESS SPACE)<but><br><clear>
+<font "FontBlue">
+<face 2>
+<showname "Templar Azula">
+<playchan AzulaVoice 29>
+NOT YOU AGAIN... LET'S FIGHT!<but><br><clear>
+<face 1>
+<font "FontRed">
+<showname "Colonel Rouge">
+<dg "Launch">//
+
+#Welcome Back
+
+<setattr [game adam true]>
+<setattr [game adamclark false]>
+<setattr [game adamangry false]>
+Welcome back! <but><dg "Main Choice">
+
+#Bye
+
+Come back again!<but><end>
+
+#Text Flow
+
+Hello, <wait 0.4>this is an example of dynamic text flow. <but>Please refrain from using the C, X, and Z keys if you'd like to fully enjoy everything this particular demonstration has to offer. <but><clear>As you can see, <wait 0.2>we're pausing the text after every comma<wait 0.2>.<wait 0.4>.<wait 0.4>. <wait 0.6>and during ellipses.<but><clear>
+This is accomplished by using the {cb}\<wait #\>{cd} command. <but>You may have also noticed us pausing and awaiting a button input. <but>This is accomplished by using the {cb}\<but\>{cd} command. <but><clear>
+<typespeed 0.02>We can also change the character drawing speed. <wait 0.1>We're drawing faster-<wait 0.4> exactly 0.02 seconds per character. <but><typespeed 0.15>Now we're drawing slowly-<wait 0.4> exactly 0.15 seconds per character. <but><clear>
+<typespeed 0.05>We accomplish this by using the {cb}\<typespeed #\>{cd} command.<but><dg "Main Choice">
+
+#Name and Face
+
+<showname "Names and Faces Master">Whoa,<wait 0.4> I have a name! <wait 0.5>And you can see it!<but><clear>
+This is accomplished by using the {cb}\<showname NAME\>{cd} command.<but><clear>
+<face 1>Now I have a face! <wait 0.5>This day just keeps on getting better and better!<but><clear>
+This is accomplished by using the {cb}\<face IMAGE\>{cd} command.<but><clear>
+<face 2><showname "Police Officer">Ohh go away mister Names and Faces Master, <wait 0.4>it's POLICE OFFICER time now!<but><clear>
+Hellloooo! <wait 0.3>Welcome to the Police Officer show!<but><clear>
+<face 1><showname "Names and Faces Master">Enough!<but><clear>
+<face 2><showname "Police Officer">I am going to ARREST you,<wait 0.1> mister! <but>O<wait 0.1><typespeed 0.08>kaaaaaaaaaaay!<typespeed 0.05><but><hidename><dg "Main Choice">
+
+#Visual Text
+
+<shake>This is shaking text.</shake> <but>Shaking text is accomplished by using the {cb}\<shake\>{cd} command.<but><br>
+<sine>This is sine-wave text.</sine> <but>Sine-wave text can be accomplished by using the {cb}\<sine\>{cd} command.<but><br>
+<grow>This is growing (actually, shrinking) text.</grow> <but>Growing text can be accomplished by using the {cb}\<grow\>{cd} command.<but><br>
+<revolve>This is revolving text.</revolve> <but>Revolving text can be accomplished by using the {cb}\<revolve\>{cd} command.<but><br>
+<color #F31D1D>This is colored text.<color -1> <but>Colored text can be accomplished by using the {cb}\<color HEX_COLOR\>{cd} command.<but><br>
+<font "Big Font">This text uses a different font.<but><font "Textbox Font"><br>
+You can change the font using the {cb}\<font FONT\>{cd} command.<but>
+<clear>
+<typespeed 0.08><shake>I- <wait 0.4>I- <wait 0.6><typespeed 0.05><font "Textbox Small">I'm so scared<font "Textbox Font"><typespeed 0.08><wait 0.2>.<wait 0.4>.<wait 0.4>. <wait 0.5>I have a <wait 0.09>f-<wait 0.12> feeling that a <wait 0.4>s-<wait 0.08> s-<wait 0.5><typespeed 0.05>spooky ghost is present.<but><clear>
+<revolve><sine><grow><typespeed 0.1><font "Big Font"><color #FF5A4B>Oh my gosh!<color -1><font "Textbox Font"></grow></sine></revolve></shake><but><dg "Main Choice">
+
+#Sound
+
+<stopchan 29><playchan UnderstoodCommanderNavigateDialogue 29><sine>{gm2}</sine><but><dg "Main Choice">
+
+#Bitmap
+
+<font "Handdrawn Font">I can use a custom bitmap font. This can also be used to support other languages, like Japanese.<bc>
+<font Wagahai><typespeed 0.02><typesound none>
+å?¾è¼©ã‚?ã?Œã?¯ã?„ã?¯çŒ«ã?§ã?‚ã‚‹ã€‚å??å‰?ã?¯ã?¾ã? ç„¡ã?„ã€‚<bc>
+ã?©ã?“ã?§ç”Ÿã‚Œã?Ÿã?‹ã?¨ã‚“ã?¨è¦‹å½“ã?‘ã‚“ã?¨ã?†ã?Œã?¤ã?‹ã?¬ã€‚ä½•ã?§ã‚‚è–„æš—ã?„ã?˜ã‚?ã?˜ã‚?ã?—ã?Ÿæ‰€ã?§ãƒ‹ãƒ£ãƒ¼ãƒ‹ãƒ£ãƒ¼æ³£ã?„ã?¦ã?„ã?Ÿäº‹ã? ã?‘ã?¯è¨˜æ†¶ã?—ã?¦ã?„ã‚‹ã€‚å?¾è¼©ã?¯ã?“ã?“ã?§å§‹ã‚?ã?¦äººé–“ã?¨ã?„ã?†ã‚‚ã?®ã‚’è¦‹ã?Ÿã€‚ã?—ã?‹ã‚‚ã?‚ã?¨ã?§è?žã??ã?¨ã??ã‚Œã?¯æ›¸ç”Ÿã?¨ã?„ã?†äººé–“ä¸­ã?§ä¸€ç•ªç?°æ‚ªã?©ã?†ã?‚ã??ã?ªç¨®æ—?ã?§ã?‚ã?£ã?Ÿã??ã?†ã? ã€‚ã?“ã?®æ›¸ç”Ÿã?¨ã?„ã?†ã?®ã?¯æ™‚ã€…æˆ‘ã€…ã‚’æ?•ã?¤ã?‹ã?¾ã?ˆã?¦ç…®ã?«ã?¦é£Ÿã?†ã?¨ã?„ã?†è©±ã?§ã?‚ã‚‹ã€‚ã?—ã?‹ã?—ã??ã?®å½“æ™‚ã?¯ä½•ã?¨ã?„ã?†è€ƒã‚‚ã?ªã?‹ã?£ã?Ÿã?‹ã‚‰åˆ¥æ®µæ??ã?—ã?„ã?¨ã‚‚æ€?ã‚?ã?ªã?‹ã?£ã?Ÿã€‚<bc>
+ã?Ÿã? å½¼ã?®æŽŒã?¦ã?®ã?²ã‚‰ã?«è¼‰ã?›ã‚‰ã‚Œã?¦ã‚¹ãƒ¼ã?¨æŒ?ã?¡ä¸Šã?’ã‚‰ã‚Œã?Ÿæ™‚ä½•ã? ã?‹ãƒ•ãƒ¯ãƒ•ãƒ¯ã?—ã?Ÿæ„Ÿã?˜ã?Œã?‚ã?£ã?Ÿã?°ã?‹ã‚Šã?§ã?‚ã‚‹ã€‚æŽŒã?®ä¸Šã?§å°‘ã?—è?½ã?¡ã?¤ã?„ã?¦æ›¸ç”Ÿã?®é¡”ã‚’è¦‹ã?Ÿã?®ã?Œã?„ã‚?ã‚†ã‚‹äººé–“ã?¨ã?„ã?†ã‚‚ã?®ã?®è¦‹å§‹ã?¿ã?¯ã?˜ã‚?ã?§ã?‚ã‚?ã?†ã€‚ã?“ã?®æ™‚å¦™ã?ªã‚‚ã?®ã? ã?¨æ€?ã?£ã?Ÿæ„Ÿã?˜ã?Œä»Šã?§ã‚‚æ®‹ã?£ã?¦ã?„ã‚‹ã€‚ç¬¬ä¸€æ¯›ã‚’ã‚‚ã?£ã?¦è£…é£¾ã?•ã‚Œã?¹ã??ã?¯ã?šã?®é¡”ã?Œã?¤ã‚‹ã?¤ã‚‹ã?—ã?¦ã?¾ã‚‹ã?§è–¬ç¼¶ã‚„ã?‹ã‚“ã? ã€‚ã??ã?®å¾Œã?”çŒ«ã?«ã‚‚ã? ã?„ã?¶é€¢ã?‚ã?£ã?Ÿã?Œã?“ã‚“ã?ªç‰‡è¼ªã?‹ã?Ÿã‚?ã?«ã?¯ä¸€åº¦ã‚‚å‡ºä¼šã?§ã??ã‚?ã?—ã?Ÿäº‹ã?Œã?ªã?„ã€‚<bc>
+ã?®ã?¿ã?ªã‚‰ã?šé¡”ã?®çœŸä¸­ã?Œã?‚ã?¾ã‚Šã?«çª?èµ·ã?—ã?¦ã?„ã‚‹ã€‚ã??ã?†ã?—ã?¦ã??ã?®ç©´ã?®ä¸­ã?‹ã‚‰æ™‚ã€…ã?·ã?†ã?·ã?†ã?¨ç…™ã?‘ã‚€ã‚Šã‚’å?¹ã??ã€‚ã?©ã?†ã‚‚å’½ã‚€ã?›ã?½ã??ã?¦å®Ÿã?«å¼±ã?£ã?Ÿã€‚ã?“ã‚Œã?Œäººé–“ã?®é£²ã‚€ç…™è?‰ã?Ÿã?°ã?“ã?¨ã?„ã?†ã‚‚ã?®ã?§ã?‚ã‚‹äº‹ã?¯ã‚ˆã?†ã‚„ã??ã?“ã?®é ƒçŸ¥ã?£ã?Ÿã€‚<but>
+<typesound "Type Text">
+<dg "Main Choice">
+OKAY LETS TRY THIS AGAIN
+OKAY??
+
+#Main Choice
+
+<face 1>
+<font "FontRed">
+<showname "Colonel Rouge">
+<playchan ColonelVoice 29>
+Are you ready to board? We need to hurry, ship's already taking damage!
+<option [
+	//["CLOSE THIS MENU IM FALLING!!" "Bye"]//
+	//["Text Flow" "Text Flow"]//
+	//["Namebox and Face" "Name and Face"]//
+	//["Visual text stuff" "Visual Text"]//
+	//["Sound" "Sound"]//
+	["Launch the Ikarus Orbital Support Unit" "Launch"]
+	//["Adam (Clark)" "Adam Clark" <getattr [game adamclark]>]//
+    ["My error... Im the Satellite Operator..." "Adam Clark" <getattr [game adamangry]>]
+	//["Bitmap Fonts" "Bitmap"]//
+	//["Switch" "Switching Scene"]//
+]>
+
+#Launch
+
+<setattr [game SatelliteLaunched true]>
+<face 1>
+<font "FontRed">
+<showname "Colonel Rouge">
+<end>
+
+#Adam Clark
+
+<face 1>
+<showname "Colonel Rouge">
+<setattr [game adam false]>
+<setattr [game adamclark true]>
+Allright, as you wish, deploying satellite now.<but><hidename><end>
+
+#Adam Angry
+
+<setattr [game adam false]>
+<setattr [game adamangry true]>
+<shake><sine>WHAAAT! Did you just call me DUDE!??</sine></shake><but><br>
+What are you doing here? <wait 0.4>Leave this area at once if you're not accredited!<but><hidename><dg "Main Choice">
+
+#Switching Scene
+
+Some dialog.<but>+LoadScene+
+
